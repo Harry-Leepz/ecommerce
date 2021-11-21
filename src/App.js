@@ -5,7 +5,11 @@ function App() {
   return (
     <div>
       <Header />
-      My App
+      <main>
+        <h1>
+          Welcome to Proshop
+        </h1>
+      </main>
       <Footer />
     </div>
   );
