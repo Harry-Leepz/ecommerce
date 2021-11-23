@@ -20,7 +20,7 @@ function ProductDetail({ match }) {
 
         {/* Product Info */}
         <Col md={3}>
-          <ListGroup variant='flush'>
+          <ListGroup>
             <ListGroup.Item>
               <h3>{product.name}</h3>
             </ListGroup.Item>
@@ -40,7 +40,41 @@ function ProductDetail({ match }) {
             <ListGroup.Item>Description: {product.description}</ListGroup.Item>
           </ListGroup>
         </Col>
-        <Col md={3}></Col>
+
+        {/* Stock and Add to cart Button */}
+        <Col md={3}>
+          <Card>
+            <ListGroup>
+              <ListGroup.Item>
+                <Row>
+                  <Col>Price :</Col>
+                  <Col>
+                    <strong>$ {product.price}</strong>
+                  </Col>
+                </Row>
+              </ListGroup.Item>
+
+              <ListGroup.Item>
+                <Row>
+                  <Col>Status :</Col>
+                  <Col>
+                    {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
+                  </Col>
+                </Row>
+              </ListGroup.Item>
+
+              <ListGroup.Item>
+                <Button
+                  className='btn-block btn-secondary btn-lg'
+                  disabled={product.countInStock === 0}
+                  type='button'
+                >
+                  Add To Cart
+                </Button>
+              </ListGroup.Item>
+            </ListGroup>
+          </Card>
+        </Col>
       </Row>
     </div>
   );
