@@ -17,6 +17,30 @@ function ProductDetail({ match }) {
         <Col md={6}>
           <Image src={product.image} alt={product.name} fluid />
         </Col>
+
+        {/* Product Info */}
+        <Col md={3}>
+          <ListGroup variant='flush'>
+            <ListGroup.Item>
+              <h3>{product.name}</h3>
+            </ListGroup.Item>
+
+            <ListGroup.Item>
+              <Rating
+                value={product.rating}
+                text={`${product.numReviews} Reviews`}
+                color={"#f8e825"}
+              />
+            </ListGroup.Item>
+
+            <ListGroup.Item>
+              <h5>Price: $ {product.price}</h5>
+            </ListGroup.Item>
+
+            <ListGroup.Item>Description: {product.description}</ListGroup.Item>
+          </ListGroup>
+        </Col>
+        <Col md={3}></Col>
       </Row>
     </div>
   );
