@@ -3,6 +3,8 @@ import React from "react";
 function Rating({ value, text, color }) {
   return (
     <div className='rating'>
+      {/* Star Rating */}
+      {/* Star 1 */}
       <span>
         <i
           style={{ color }}
@@ -16,6 +18,7 @@ function Rating({ value, text, color }) {
         ></i>
       </span>
 
+      {/* Star 2 */}
       <span>
         <i
           style={{ color }}
@@ -29,6 +32,7 @@ function Rating({ value, text, color }) {
         ></i>
       </span>
 
+      {/* Star 3 */}
       <span>
         <i
           style={{ color }}
@@ -42,6 +46,7 @@ function Rating({ value, text, color }) {
         ></i>
       </span>
 
+      {/* Star 4 */}
       <span>
         <i
           style={{ color }}
@@ -55,6 +60,7 @@ function Rating({ value, text, color }) {
         ></i>
       </span>
 
+      {/* Star 5 */}
       <span>
         <i
           style={{ color }}
